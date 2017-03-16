@@ -5,10 +5,7 @@ $bigDigit = $argv[2];
 if (!is_numeric($digit) || !is_numeric($bigDigit))
     die;
 $num = 0;
-foreach (preg_split('//', $bigDigit) as $item) {
-    if ($digit == $item)
-        $num++;
-}
+str_replace($digit, $digit, $bigDigit, $num);
 var_dump($num);
 
 ?>
