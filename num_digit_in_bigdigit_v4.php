@@ -5,7 +5,7 @@ $bigDigit = $argv[2];
 if (!is_numeric($digit) || !is_numeric($bigDigit))
     die;
 $num = 0;
-foreach (str_split($bigDigit) as $item) {
+foreach (preg_split('//', $bigDigit) as $item) {
     if ($digit == $item)
         $num++;
 }
