@@ -4,8 +4,8 @@ $digit = $argv[1];
 $bigDigit = $argv[2];
 if (!is_numeric($digit) || !is_numeric($bigDigit))
     die;
-$num = 0;
-str_replace($digit, $digit, $bigDigit, $num);
+//$num = 1;
+$num = strlen($bigDigit) - strlen(str_replace($digit, '', $bigDigit));
 var_dump($num);
 
 ?>
