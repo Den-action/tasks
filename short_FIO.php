@@ -7,7 +7,7 @@ if (!preg_match('/[a-zA-Z]/', $fio))
 $arr = explode(' ', $fio);
 $length = count($arr);
 for($i=1; $i < $length; $i++) {
-    $arr[$i] = ' ' . substr($arr[$i], 0, 1) . '.';
+    $arr[$i] = ' ' . $arr[$i][0] . '.';
 }
 $str = implode($arr);
 var_dump($str);
