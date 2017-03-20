@@ -1,5 +1,4 @@
 <?php
-//$ftable = fopen("table.txt", "w");
 $file = __DIR__ . DIRECTORY_SEPARATOR . 'table.txt';
 for ($i = 1; $i < 10; $i++){
     $str = '';
@@ -12,10 +11,11 @@ for ($i = 1; $i < 10; $i++){
     echo "\n";
     file_put_contents($file, "\r\n", FILE_APPEND);
     for ($k = 1; $k < 28; $k++){
-        echo 0 == $k % 3 ? '+' : '-';
+        echo $borderStr = (0 == $k % 3) ? '+' : '-';
+        file_put_contents($file, $borderStr, FILE_APPEND);
     }
     echo "\n";
+    file_put_contents($file, "\r\n", FILE_APPEND);
 }
-//fclose($ftable);
 
 ?>
